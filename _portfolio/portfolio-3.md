@@ -8,7 +8,8 @@ collection: portfolio
 
 ### The object of this project was to create and use a custom function in Python. I created a function to classify lakes in New Hampshire in 2 classes: under 1 sq km, and those over 1 sq km.
 
-```import matplotlib.pyplot as plt
+```
+import matplotlib.pyplot as plt
 import geopandas as gpd
 ```
 
