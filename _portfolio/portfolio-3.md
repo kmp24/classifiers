@@ -1,12 +1,12 @@
 ---
 title: "Custom function - classifier"
-excerpt: "Using the USGS's MRData WMS, I created an interactive map using Folium, stylized with USGS Lithologic color classes.<br/><img src='/images/foliumbedrock.JPG'>"
+excerpt: "Using a custom function to classify lakes by size, into two classes.<br/><img src='/images/2LakesClassifier.JPG' style='width: 350px;'>"
 collection: portfolio
 ---
 
 ### Reclassifying NH Lakes with a custom function
 
-### The object of this project was to create and use a custom function in Python. I created a function to classify lakes in New Hampshire in 2 classefe: under 1 sq km, and those over 1 sq km.
+### The object of this project was to create and use a custom function in Python. I created a function to classify lakes in New Hampshire in 2 classes: under 1 sq km, and those over 1 sq km.
 
 ```import matplotlib.pyplot as plt
 import geopandas as gpd
@@ -22,7 +22,7 @@ data = gpd.read_file(fp)
 ```
 
 ### Examining the columns: I'm going to get rid of irrelevant columns in the shapefile, selecting just the county, area, and Lake names for this analysis.
-
+<img src='/images/data.JPG' style='width: 350px;'>"
 ```
 data.head(2)
 ```
