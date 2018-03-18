@@ -22,7 +22,7 @@ data = gpd.read_file(fp)
 ```
 
 ### Examining the columns: I'm going to get rid of irrelevant columns in the shapefile, selecting just the county, area, and Lake names for this analysis.
-<img src='/images/data.JPG' style='width: 350px;'>"
+
 ```
 data.head(2)
 ```
