@@ -3,7 +3,8 @@ title: "Folium Map of NH Bedrock"
 excerpt: "Using the USGS's MRData WMS, I created an interactive map using Folium, stylized with USGS Lithologic color classes.<br/><img src='/images/foliumbedrock.JPG' style='height: 350px;'>>"
 collection: portfolio
 ---
-[View the interactive web map here](https://kmp24.github.io/files/geology_nh_map.html)
+[View the interactive web map here, or at the bottom of the page.](https://kmp24.github.io/files/geology_nh_map.html)
+
 
 ### This project adds onto an earlier version that creates a plot summarizing bedrock area, to create a folium map.
 
@@ -81,7 +82,7 @@ conglomerate         35.352720        conglomerate
 ```
 ### The resulting figure is created:
 
-    ![Mostly Granite](https://github.com/kmp24/GeologyPython/blob/master/Rock_types.png?raw=true)  
+<img src='/images/Rock_types.png' style='height: 500px;'>" 
 
 
 
@@ -113,3 +114,4 @@ m
 ```python
 m.save('C:/Users/Kaitlyn/Desktop/GeoPython/GeologyPython/geology_nh_map.html')
 ```
+<iframe src='https://kmp24.github.io/files/geology_nh_map.html' style='width: 800px;'></iframe>
