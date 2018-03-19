@@ -31,6 +31,7 @@ data.head(2)
 selected_cols = ['COUNTY', 'AREA', 'LAKE', 'geometry']
 data = data[selected_cols]
 ```
+<img src='/images/Data.JPG' style='width: 350px;'>"
 
 #### A plot of lakes, symbolized by area
 
@@ -43,6 +44,7 @@ data.plot(column='AREA', linewidth=0.05)
 plt.tight_layout()
 ```
 
+<img src='/images/1LakesPolygons.JPG' style='width: 400px;'>"
 ### Now, to create a binary classifier - everything under 1 sq km in one class, everything over 1 sq mk is in another:
 
 ```
@@ -74,10 +76,11 @@ data['small_big'] = None
 data = data.apply(binaryClassifier, source_col='area_km2', output_col='small_big', threshold=l_mean_size, axis=1)
 ```
 
-### And here is the resulting plot:
+### And here is the resulting plot (zoomed in for detail):
 ```
 data.plot(column='small_big', linewidth=0.05, cmap="seismic")
 ```
+<img src='/images/2LakesClassifier.JPG' style='width: 500px;'>"
 
 ### Save the file as a new shapefile:
 ```
