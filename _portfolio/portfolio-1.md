@@ -37,25 +37,6 @@ colors['hex'] = colors.apply(lambda x: to_hex(np.asarray([x['r'],x['g'],x['b'],2
 ```python
 rock_group = geology.groupby('ROCKTYPE1')
 ```
-### Create folium maps for each rock type
-```python
-map_center = [43.9,-72.6]
-m = folium.Map(location=map_center, zoom_start=8, height='100%', control_scale=True)
-fg = folium.FeatureGroup(name='Geology of New Hampshire').add_to(m)
-
-
-for rock in rock_group.groups.keys():
-    rock_df = geology.loc[geology.ROCKTYPE1 == rock]
-    style_function = lambda x: {'fillColor': colors.loc[x['properties']['ROCKTYPE1']]['hex'],
-                                'opacity': 0, 
-                                'fillOpacity': .85,
-                               }
-    g = folium.GeoJson(rock_df, style_function=style_function, name=rock.title())
-    g.add_child(folium.Popup(rock.title()))
-    fg.add_child(g)
-
-folium.LayerControl().add_to(m)
-```
 
 ### Calculate area
 ```python
@@ -77,35 +58,4 @@ conglomerate         35.352720        conglomerate
 ```
 ### The resulting figure is created:
 
-    ![Mostly Granite](https://github.com/kmp24/GeologyPython/blob/master/Rock_types.png?raw=true)  
-
-
-
-### Create a folium map using USGS rock type descriptions
-```python
-import requests
-
-response = requests.request('GET', 'https://mrdata.usgs.gov/geology/state/json/{}'.format('MIYc;0')).json()
-m = folium.Map(location=map_center, zoom_start=8, height='100%', control_scale=True)
-fg = folium.FeatureGroup(name='Geology').add_to(m)
-
-for unit in geology.groupby('UNIT_LINK').groups.keys():
-    unit_df = geology.loc[geology.UNIT_LINK == unit]
-    description = requests.request(
-        'GET', 'https://mrdata.usgs.gov/geology/state/json/{}'.format(unit)).json()['unitdesc']
-    style_function = lambda x: {'fillColor': colors.loc[x['properties']['ROCKTYPE1']]['hex'],
-                                'opacity': 0, 
-                                'fillOpacity': .85,
-                               }
-    g = folium.GeoJson(unit_df, style_function=style_function)
-    g.add_child(folium.Popup(description))
-    fg.add_child(g)
-
-folium.LayerControl().add_to(m)
-m
-```
-
-### Save the file
-```python
-m.save('C:/Users/Kaitlyn/Desktop/GeoPython/GeologyPython/geology_nh_map.html')
-```
+<img src='/images/Rock_types.png' style='height: 500px;'>"  
