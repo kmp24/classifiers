@@ -114,4 +114,4 @@ m
 ```python
 m.save('C:/Users/Kaitlyn/Desktop/GeoPython/GeologyPython/geology_nh_map.html')
 ```
-<iframe src='https://kmp24.github.io/files/geology_nh_map.html' style='width: 800px;'></iframe>
+<iframe src='https://kmp24.github.io/files/geology_nh_map.html' style='width: 800px; height: 600px'></iframe>
