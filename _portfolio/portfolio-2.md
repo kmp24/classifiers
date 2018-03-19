@@ -1,6 +1,6 @@
 ---
 title: "Folium Map of NH Bedrock"
-excerpt: "Using the USGS's MRData WMS, I created an interactive map using Folium, stylized with USGS Lithologic color classes.<br/><img src='/images/foliumbedrock.JPG' style='height: 500px;'>>"
+excerpt: "Using the USGS's MRData WMS, I created an interactive map using Folium, stylized with USGS Lithologic color classes.<br/><img src='/images/foliumbedrock.JPG' style='height: 350px;'>>"
 collection: portfolio
 ---
 [View the interactive web map here](https://kmp24.github.io/files/geology_nh_map.html)
