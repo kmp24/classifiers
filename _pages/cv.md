@@ -39,7 +39,7 @@ Related experience
   
 Skills
 ======
-* Spatial analysis & Remote Sensing
+* Spatial analysis 
 * Spatial Databases
   * ArcGIS
   * QGIS
